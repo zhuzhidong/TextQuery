@@ -32,7 +32,8 @@
 *.app
 
 # Debug File Folder
-Debug/*
-.vs/*
+Debug/
+.vs/
+x64/
 TextQuery.VC.db
 TextQuery.VC.VC.opendb
