@@ -9,7 +9,7 @@ TextQuery::TextQuery(std::ifstream & is) : file(new std::vector<std::string>)
     while (std::getline(is, text))
     {
         file->push_back(text);
-        int n = file->size() - 1;
+        size_t n = file->size() - 1;
         std::istringstream line(text);
         std::string word;
         while (line >> word)
