@@ -34,3 +34,4 @@
 # Debug File Folder
 Debug/*
 .vs/*
+TextQuery.VC.db
