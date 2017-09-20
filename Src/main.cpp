@@ -58,6 +58,7 @@ void runOOPQueries(std::ifstream & infile)
                         PostfixNotation.push_back(Operand.top());
                         Operand.pop();
                     }
+                    Operand.push(str);
                 }
             }
             else if ("(" == str)
