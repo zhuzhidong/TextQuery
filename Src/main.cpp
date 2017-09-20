@@ -40,45 +40,45 @@ void runOOPQueries(std::ifstream & infile)
         std::istringstream line(query_line);
         std::string str;
         std::vector<std::string> PostfixNotation;
-        std::stack<std::string> Operand;
+        std::stack<std::string> Operator;
         while (line >> str)
         {
             if ("~" == str)
-                Operand.push(str);
+                Operator.push(str);
             else if ("&" == str || "|" == str)
             {
-                if (Operand.empty())
-                    Operand.push(str);
-                else if ("(" == Operand.top())
-                    Operand.push(str);
+                if (Operator.empty())
+                    Operator.push(str);
+                else if ("(" == Operator.top())
+                    Operator.push(str);
                 else
                 {
-                    while (!Operand.empty() && "(" != Operand.top()) //short circuit evaluation
+                    while (!Operator.empty() && "(" != Operator.top()) //short circuit evaluation
                     {
-                        PostfixNotation.push_back(Operand.top());
-                        Operand.pop();
+                        PostfixNotation.push_back(Operator.top());
+                        Operator.pop();
                     }
-                    Operand.push(str);
+                    Operator.push(str);
                 }
             }
             else if ("(" == str)
-                Operand.push(str);
+                Operator.push(str);
             else if (")" == str)
             {
-                while ("(" != Operand.top())
+                while ("(" != Operator.top())
                 {
-                    PostfixNotation.push_back(Operand.top());
-                    Operand.pop();
+                    PostfixNotation.push_back(Operator.top());
+                    Operator.pop();
                 }
-                Operand.pop();
+                Operator.pop();
             }
             else
                 PostfixNotation.push_back(str);
         }
-        while (!Operand.empty())
+        while (!Operator.empty())
         {
-            PostfixNotation.push_back(Operand.top());
-            Operand.pop();
+            PostfixNotation.push_back(Operator.top());
+            Operator.pop();
         }
         std::stack<Query> CombinedQuery;
         for (auto &str : PostfixNotation)
