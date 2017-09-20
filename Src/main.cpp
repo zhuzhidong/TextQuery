@@ -53,7 +53,7 @@ void runOOPQueries(std::ifstream & infile)
                     Operand.push(str);
                 else
                 {
-                    while ("(" != Operand.top() && !Operand.empty())
+                    while (!Operand.empty() && "(" != Operand.top()) //short circuit evaluation
                     {
                         PostfixNotation.push_back(Operand.top());
                         Operand.pop();
