@@ -95,7 +95,7 @@ void runOOPQueries(std::ifstream & infile)
                 CombinedQuery.pop();
                 Query temp2 = CombinedQuery.top();
                 CombinedQuery.pop();
-                CombinedQuery.push(temp1 & temp2);
+                CombinedQuery.push(temp2 & temp1);
             }
             else if ("|" == str)
             {
@@ -103,7 +103,7 @@ void runOOPQueries(std::ifstream & infile)
                 CombinedQuery.pop();
                 Query temp2 = CombinedQuery.top();
                 CombinedQuery.pop();
-                CombinedQuery.push(temp1 | temp2);
+                CombinedQuery.push(temp2 | temp1);
             }
             else
                 CombinedQuery.emplace(str);
