@@ -4,6 +4,7 @@
 #include "QueryResult.h"
 #include "TextQuery.h"
 #include <iostream>
+#include <fstream>
 
 class Query_base
 {
@@ -89,3 +90,7 @@ inline Query operator|(const Query &lhs, const Query &rhs)
 {
     return std::shared_ptr<Query_base>(new OrQuery(lhs, rhs));
 }
+
+void runQueries(std::ifstream & infile);
+
+void runOOPQueries(std::ifstream & infile);

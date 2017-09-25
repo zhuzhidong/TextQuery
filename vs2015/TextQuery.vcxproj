@@ -27,7 +27,10 @@
     <ClCompile Include="..\Src\main.cpp" />
     <ClCompile Include="..\Src\Query.cpp" />
     <ClCompile Include="..\Src\QueryResult.cpp" />
+    <ClCompile Include="..\Src\QueryResult_unittest.cpp" />
+    <ClCompile Include="..\Src\Query_unittest.cpp" />
     <ClCompile Include="..\Src\TextQuery.cpp" />
+    <ClCompile Include="..\Src\TextQuery_unittest.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{ECB5FBBD-EA0C-4BDE-B3B3-0A91095C1FEA}</ProjectGuid>
@@ -100,10 +103,13 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(GTEST_HOME)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>$(GTEST_HOME)\lib\gtest_maind.lib;$(GTEST_HOME)\lib\gtestd.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <CustomBuildStep>
       <Command>
