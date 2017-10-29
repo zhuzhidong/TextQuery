@@ -20,14 +20,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Src\Query.h" />
-    <ClInclude Include="..\Src\QueryResult.h" />
     <ClInclude Include="..\Src\TextQuery.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Src\main.cpp" />
     <ClCompile Include="..\Src\Query.cpp" />
-    <ClCompile Include="..\Src\QueryResult.cpp" />
-    <ClCompile Include="..\Src\QueryResult_unittest.cpp" />
     <ClCompile Include="..\Src\Query_unittest.cpp" />
     <ClCompile Include="..\Src\TextQuery.cpp" />
     <ClCompile Include="..\Src\TextQuery_unittest.cpp" />

@@ -21,9 +21,6 @@
     <ClInclude Include="..\Src\Query.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\Src\QueryResult.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="..\Src\TextQuery.h">
       <Filter>头文件</Filter>
     </ClInclude>
@@ -35,16 +32,10 @@
     <ClCompile Include="..\Src\Query.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\Src\QueryResult.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="..\Src\TextQuery.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="..\Src\Query_unittest.cpp">
-      <Filter>UnitTest</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Src\QueryResult_unittest.cpp">
       <Filter>UnitTest</Filter>
     </ClCompile>
     <ClCompile Include="..\Src\TextQuery_unittest.cpp">
