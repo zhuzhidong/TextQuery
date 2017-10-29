@@ -25,9 +25,7 @@
   <ItemGroup>
     <ClCompile Include="..\Src\main.cpp" />
     <ClCompile Include="..\Src\Query.cpp" />
-    <ClCompile Include="..\Src\Query_unittest.cpp" />
     <ClCompile Include="..\Src\TextQuery.cpp" />
-    <ClCompile Include="..\Src\TextQuery_unittest.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{ECB5FBBD-EA0C-4BDE-B3B3-0A91095C1FEA}</ProjectGuid>
